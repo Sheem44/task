@@ -1,0 +1,28 @@
+get all tasks
+
+http://localhost:9999/allTasks
+
+
+add task
+
+http://localhost:9999/addTask
+
+header of browser with blugin 
+content ype   application/json
+
+{"task_content":"new task"}
+
+delete task
+
+http://localhost:9999/deleteTask/100       found
+http://localhost:9999/deleteTask/110       not found
+
+
+ubdate task 
+http://localhost:9999/updateTask
+
+header of browser with blugin 
+content ype   application/json
+
+{"id":100",task_content":"new task"}
+{"id":110",task_content":"new task"}
