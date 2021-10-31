@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
-//inial data
+//intial data
 let tasks=[
     {"id":100,"task_content":"send an email","completed":true},
     {"id":101,"task_content":"complete the project","completed":false}
@@ -26,7 +26,7 @@ app.get("/allTasks",(req,res)=>{
 //add task
 app.post("/addTask",(req,res)=>{
     let newid= tasks[tasks.length-1].id+1
-    let newtaskContent=req.body.task_content
+    let newtaskContent=req.body.task_conten
     let newtask= {"id":newid,"task_content":newtaskContent,"completed":false}
     tasks.push(newtask)
     res.send("Task added successfully")
@@ -52,7 +52,7 @@ app.put("/updateTask",(req,res)=>{
     if(index >=0){
         let task= tasks[index];
         task.task_content= ubdatedTask
-        res.send("update task"+ task.task_content)
+        res.send("update task "+ task.task_content)
     } else{
         res.send("task is not exist ")
     }
