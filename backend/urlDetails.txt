@@ -26,3 +26,12 @@ content ype   application/json
 
 {"id":100",task_content":"new task"}
 {"id":110",task_content":"new task"}
+
+ task completed
+http://localhost:9999/taskCompleted
+
+header of browser with blugin 
+content ype   application/json
+
+{"id":100"}
+{"id":110"}

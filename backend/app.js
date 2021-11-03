@@ -57,5 +57,17 @@ app.put("/updateTask",(req,res)=>{
         res.send("task is not exist ")
     }
 })
+//task complated
+app.put("/taskCompleted",(req,res)=>{
+    let id= req.body.id;
+    let index= tasks.findIndex(t=>t.id==id)
+    if(index >=0){
+        let task= tasks[index];
+        task.completed= true
+        res.send("task with id +"+task.id+ " is completed")
+    } else{
+        res.send("task is not exist ")
+    }
+})
 
 app.listen(9999,()=>console.log("Server is running on port number 9999"))
