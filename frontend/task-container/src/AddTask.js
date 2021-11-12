@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { Component } from 'react'
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 class AddTask extends Component {
     constructor (props) {
         super(props)
@@ -19,7 +20,7 @@ class AddTask extends Component {
     }
     render () {
         return (
-            <div>
+            <div >
                  <h2>Add Task</h2>
                 <form onSubmit={this.handleSubmit}>
                     <label>Task: </label>

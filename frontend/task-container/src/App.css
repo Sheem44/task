@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 
@@ -8,15 +9,17 @@
   position: absolute;
   width: 50%;
   left: 20%;
+  
 }
 .header{
   width: 100%;
   height: 65px;
+  margin-bottom: -21px;
   /* position: relative; */
-  margin: 25px 0 15px 0px;
-  background: linear-gradient(to right,  rgba(42,72,107,1) 0%,rgba(80,122,167,1) 100%);
-  box-shadow: 1px 15px 25px -5px rgba(0,0,0,0.3);
-  padding: 20px 10px 30px 10px;
+  margin-top: 25px;
+  background: linear-gradient(to right, rgba(42,72,107,1) 0%,rgba(80,122,167,1) 100%);
+  box-shadow: 8px 12px 12px -3px rgb(0 0 0 / 30%);
+  padding: 20px 10px 26px 10px;
 }
 .header h2{
  float: left;
@@ -42,25 +45,71 @@
 .header a:focus{
   transform: rotate(360deg);
 }
-.row{
-  margin-left: 10px;
-  background-color: yellow;
+
+.task_container{
+  background-color: #ffffff;
+  box-shadow: 1px 7px 5px 0px rgb(218 215 206 / 80%);
+  z-index: 2;
+  --bs-gutter-x: 5.5rem;
+  --bs-gutter-y: -1rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px 0px 25px 5px;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  border-left: #ffc107 solid 6px;
+  transition: all 1s;
 }
-._btn{
-  padding: 5px 15px;
-  background-color: #4C75A1;
+.buttons{
+  text-align: right;
+  padding-right: 5px;
+}
+.buttons button{
+  background-color: #ffc107;
+  border-radius: 25px;
+  padding: 5px 10px;
   border: none;
-  margin: 2px 5px;  
-  box-shadow: 1px 5px 10px -5px rgba(0,0,0,0.5);
-  color: #fff;
-  
+   margin: 0px 2px;
+   box-shadow: 1px 5px 10px -5px rgb(0 0 0 / 50%);
+   color: #fff;
+   transition:border,1s
 }
+#edit_btn{
+  background-color: #4ca150; 
+}
+#delet_btn{
+  background-color: #912727; 
+}
+
+#edit_btn:hover{
+  background-color: white;
+  color: #4ca150;
+}
+#delet_btn:hover{
+  background-color: white;
+  color: #912727;
+}
+
+
 .task_content{
   text-align: left;
+  padding-left: 5px;
+  font-size: 1.2rem;
+  font-family: 'Open Sans', sans-serif;
 }
-hr{
-  height: 2px;
-  width: 70%;
-  margin-left: 50px;
-  margin-top: 5px;
+.task_content::first-letter{
+  color: #3f638c;
+    text-transform: uppercase;
+    font-size: larger;
+}
+
+.add_container {
+ /* display: none;*/
+ position: absolute;
+  height: 0;
+  opacity: 0;
+  margin: 22px 10px 10px 10px; 
+  padding-top: 25px;
+  background: white;
+  box-shadow: 1px 5px 10px -5px rgb(0 0 0 / 50%);
+  transition: opacity 2s;
 }

@@ -63,7 +63,12 @@ app.put("/taskCompleted",(req,res)=>{
     let index= tasks.findIndex(t=>t.id==id)
     if(index >=0){
         let task= tasks[index];
+        if(!task.completed){
         task.completed= true
+        }else if(task.completed){
+            task.completed= false
+        }
+
         res.send("task with id +"+task.id+ " is completed")
     } else{
         res.send("task is not exist ")
